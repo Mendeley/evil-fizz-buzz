@@ -1,6 +1,6 @@
 package com.elsevier.fizzbuzz;
 
-public class Module15 implements NumberFilter {
+public class DivisibleBy15Processor implements NumberFilter {
 
 
     public static final String FIZZ_BUZZ = "FizzBuzz";
