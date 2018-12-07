@@ -7,6 +7,10 @@ public class FizzBuzzConsoleImpl implements FizzBuzzConsole {
 
     @Override
     public String print(List<String> sequence) {
-        return sequence.stream().collect(Collectors.joining(","));
+        String output = sequence.stream().collect(Collectors.joining(","));
+
+        System.out.println(output);
+
+        return output;
     }
 }
