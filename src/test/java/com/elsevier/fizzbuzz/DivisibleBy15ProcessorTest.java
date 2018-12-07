@@ -17,6 +17,7 @@ public class DivisibleBy15ProcessorTest {
         DivisibleBy15Processor divisibleBy15Processor = new DivisibleBy15Processor();
         CompositeObject obj = new CompositeObject(number, ""+number);
         assertEquals("FizzBuzz", divisibleBy15Processor.process(obj).getValue());
+        assertEquals(number, divisibleBy15Processor.process(obj).getIndex());
     }
 
     @Test
