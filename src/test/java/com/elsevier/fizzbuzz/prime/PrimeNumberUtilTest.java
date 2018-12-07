@@ -1,6 +1,5 @@
 package com.elsevier.fizzbuzz.prime;
 
-import com.elsevier.fizzbuzz.prime.PrimeNumberService;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Before;
@@ -11,25 +10,25 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(JUnitParamsRunner.class)
-public class PrimeNumberServiceTest {
+public class PrimeNumberUtilTest {
 
-    private PrimeNumberService primeNumberService;
+    private PrimeNumberUtil primeNumberUtil;
 
     @Before
     public void setUp() {
-        primeNumberService = new PrimeNumberService();
+        primeNumberUtil = new PrimeNumberUtil();
     }
 
     @Test
     @Parameters({"2, true", "3, true", "5, true", "7, true"})
     public void shouldReturnTrueForAListOfPrimes(int number, boolean result) {
-        assertThat(primeNumberService.isPrime(number), equalTo(result));
+        assertThat(primeNumberUtil.isPrime(number), equalTo(result));
     }
 
     @Test
     @Parameters({"1, false", "4, false", "6, false", "8, false"})
     public void shouldReturnFalseForAListOfNonPrimes(int number, boolean result) {
-        assertThat(primeNumberService.isPrime(number), equalTo(result));
+        assertThat(primeNumberUtil.isPrime(number), equalTo(result));
     }
 
 }

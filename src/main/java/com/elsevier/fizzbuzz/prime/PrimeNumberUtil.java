@@ -2,7 +2,7 @@ package com.elsevier.fizzbuzz.prime;
 
 import java.util.stream.IntStream;
 
-public class PrimeNumberService {
+public class PrimeNumberUtil {
 
     public boolean isPrime(int number) {
         if (number == 1)
