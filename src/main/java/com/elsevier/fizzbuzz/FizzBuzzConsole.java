@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface FizzBuzzConsole {
 
-    void print(List<String> sequence);
+    String print(List<String> sequence);
 }
