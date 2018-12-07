@@ -10,25 +10,25 @@ import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(JUnitParamsRunner.class)
-public class PrimeNumberTest {
+public class PrimeNumberServiceTest {
 
-    private PrimeNumber primeNumber;
+    private PrimeNumberService primeNumberService;
 
     @Before
     public void setUp() {
-        primeNumber = new PrimeNumber();
+        primeNumberService = new PrimeNumberService();
     }
 
     @Test
     @Parameters({"2, true", "3, true", "5, true", "7, true"})
     public void shouldReturnTrueForAListOfPrimes(int number, boolean result) {
-        assertThat(primeNumber.isPrime(number), equalTo(result));
+        assertThat(primeNumberService.isPrime(number), equalTo(result));
     }
 
     @Test
     @Parameters({"1, false", "4, false", "6, false", "8, false"})
     public void shouldReturnFalseForAListOfNonPrimes(int number, boolean result) {
-        assertThat(primeNumber.isPrime(number), equalTo(result));
+        assertThat(primeNumberService.isPrime(number), equalTo(result));
     }
 
 }
