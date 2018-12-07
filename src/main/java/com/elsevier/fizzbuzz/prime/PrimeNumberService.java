@@ -1,8 +1,8 @@
-package com.elsevier.fizzbuzz;
+package com.elsevier.fizzbuzz.prime;
 
 import java.util.stream.IntStream;
 
-public class PrimeNumber {
+public class PrimeNumberService {
 
     public boolean isPrime(int number) {
         if (number == 1)
