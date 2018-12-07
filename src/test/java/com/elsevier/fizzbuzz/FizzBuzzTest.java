@@ -18,6 +18,7 @@ public class FizzBuzzTest {
         SequenceGenerator sequenceGenerator = mock(SequenceGenerator.class);
         when(sequenceGenerator.generate(1, 10)).thenReturn(sequence);
         new FizzBuzz(sequenceGenerator, output).run(1, 10);
-        verify(output).print(sequence);
+
+        verify(output).print(sequence, System.out);
     }
 }

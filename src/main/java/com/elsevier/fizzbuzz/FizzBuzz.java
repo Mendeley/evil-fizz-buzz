@@ -10,6 +10,6 @@ public class FizzBuzz {
     }
 
     public void run(int start, int end) {
-        fizzBuzzConsole.print(sequenceGenerator.generate(start, end));
+        fizzBuzzConsole.print(sequenceGenerator.generate(start, end), System.out);
     }
 }

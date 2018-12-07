@@ -5,13 +5,14 @@ import junitparams.Parameters;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 @RunWith(JUnitParamsRunner.class)
 public class FizzBuzzConsoleTest {
@@ -23,13 +24,22 @@ public class FizzBuzzConsoleTest {
 
         List<String> sequenceList = Arrays.stream(sequence).collect(Collectors.toList());
 
-        assertThat(fizzBuzzConsole.print(sequenceList), is("Fizz,Buzz,FizzBuzz,3Fizz"));
+        PrintStream outputStream = mock(PrintStream.class);
+
+        String expectedOutput = "Fizz,Buzz,FizzBuzz,3Fizz";
+        fizzBuzzConsole.print(sequenceList, outputStream);
+
+        verify(outputStream).println(expectedOutput);
     }
 
     @Test
     public void outputsEmptyStringIfListIsEmpty() {
         FizzBuzzConsole fizzBuzzConsole = new FizzBuzzConsoleImpl();
 
-        assertThat(fizzBuzzConsole.print(new ArrayList<>()), is(""));
+        PrintStream outputStream = mock(PrintStream.class);
+
+        fizzBuzzConsole.print(new ArrayList<>(), outputStream);
+
+        verify(outputStream).println("");
     }
 }

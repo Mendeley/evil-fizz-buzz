@@ -1,8 +1,9 @@
 package com.elsevier.fizzbuzz;
 
+import java.io.PrintStream;
 import java.util.List;
 
 public interface FizzBuzzConsole {
 
-    String print(List<String> sequence);
+    void print(List<String> sequence, PrintStream outputStream);
 }
