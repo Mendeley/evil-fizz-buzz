@@ -1,5 +1,6 @@
-package com.elsevier.fizzbuzz;
+package com.elsevier.fizzbuzz.prime;
 
+import com.elsevier.fizzbuzz.prime.PrimeNumberService;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import org.junit.Before;

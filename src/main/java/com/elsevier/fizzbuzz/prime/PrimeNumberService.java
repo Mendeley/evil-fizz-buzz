@@ -1,4 +1,4 @@
-package com.elsevier.fizzbuzz;
+package com.elsevier.fizzbuzz.prime;
 
 import java.util.stream.IntStream;
 

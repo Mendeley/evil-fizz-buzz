@@ -1,5 +1,8 @@
-package com.elsevier.fizzbuzz;
+package com.elsevier.fizzbuzz.prime;
 
+import com.elsevier.fizzbuzz.CompositeObject;
+import com.elsevier.fizzbuzz.prime.PrimeNumberConcatenator;
+import com.elsevier.fizzbuzz.prime.PrimeNumberService;
 import org.junit.Before;
 import org.junit.Test;
 

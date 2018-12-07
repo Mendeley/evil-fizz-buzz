@@ -1,4 +1,6 @@
-package com.elsevier.fizzbuzz;
+package com.elsevier.fizzbuzz.prime;
+
+import com.elsevier.fizzbuzz.CompositeObject;
 
 public class PrimeNumberConcatenator {
 
