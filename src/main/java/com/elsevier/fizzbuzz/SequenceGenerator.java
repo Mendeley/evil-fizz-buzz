@@ -20,6 +20,6 @@ public class SequenceGenerator {
     }
 
     private CompositeObject createCompositeObject(int i) {
-        return new CompositeObject(i);
+        return new CompositeObject(i, "");
     }
 }
